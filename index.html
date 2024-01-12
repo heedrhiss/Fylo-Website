@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Icon" type="image/png" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+    <title>Fylo Website</title>
+    <script>
+        if (
+          localStorage.getItem('color-theme') === 'dark' ||
+          (!('color-theme' in localStorage) &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches)
+        ) {
+          document.documentElement.classList.add('dark')
+        } else {
+          document.documentElement.classList.remove('dark')
+        }
+      </script>
+<script src="script.js" defer></script>
+</head>
+<body class="dark:bg-darkBlue dark:text-white">
+<header class="max-w-6xl flex flex-col mt-10 m-5 mx-auto">
+<div class="mx-auto text-lg bg-logo-light bg-no-repeat dark:bg-logo-dark md:absolute top-10 left-10 h-20 w-52"></div>
+<div class="flex mx-auto font-bold items-center space-x-5 md:space-x-10 md:absolute top-12 right-10">
+    <a href="#features" class=" hover:text-accentCyan">Features</a>
+    <a href="#testimonials" class=" hover:text-accentCyan">Testimonials</a>
+    <button id="toggle" class="ring ring-gray-200 dark:ring-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2">
+        <svg
+        id="theme-toggle-dark-icon"
+        class="w-5 h-5 hidden"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+        ></path>
+      </svg>
+      <!-- Light SVG Icon -->
+      <svg
+        id="theme-toggle-light-icon"
+        class="w-5 h-5 hidden"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+    </button>
+</div>
+</header>
+
+<section id="one" class="bg-bg-light dark:bg-bg-dark mt-24 bg-no-repeat bg-bottom bg-contain pb-20">
+  <div class="max-w-6xl flex flex-col items-center text-center justify-center mx-5 space-y-5 md:mx-auto">
+    <img src="./images/illustration-intro.png" class="" alt="">
+    <div class="max-w-xl space-y-8">
+    <h2 class="font-bold md:text-4xl">All your files in one secure location, assessible anywhere.</h2>
+    <p class="md:text-lg">Fylo stores all your most important files in one secure location. Access them wherever you need, share and collaborate with friends family, and co-workers.</p>
+    <button class="py-3 px-10 text-center rounded-full bg-accentCyan hover:scale-90">
+      Get Started
+    </button>
+  </div>
+  
+  </div>
+</section>
+
+<section id="features" class="pt-12 py-16 bg-gray-50 dark:bg-darkBlue1">
+<div class=" max-w-5xl grid gap-10 mx-auto md:grid-cols-2">
+  <div class="flex flex-col items-center text-center mt-5 p-5 space-y-7 ">
+    <div>
+      <img src="./images/icon-access-anywhere.svg" alt="">
+    </div>
+    <h5 class="text-xl font-bold">Access your files from anywhere</h5>
+    <p class="md:max-w-sm">The ability to use a smartphone, tablet, or computer to access your account means your files follow you everywhere.</p>
+  </div>
+
+  <div class="flex flex-col items-center text-center p-5 space-y-7 ">
+    <div>
+      <img src="./images/icon-security.svg" alt="">
+    </div>
+    <h5 class="text-xl font-bold">Security you can trust</h5>
+    <p class="md:max-w-sm">2-factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files.</p>
+  </div>
+
+  <div class="flex flex-col items-center text-center p-5 space-y-7 ">
+    <div>
+      <img src="./images/icon-collaboration.svg" alt="">
+    </div>
+    <h5 class="text-xl font-bold">Access your files from anywhere</h5>
+    <p class="md:max-w-sm">The ability to use a smartphone, tablet, or computer to access your account means your files follow you everywhere.</p>
+  </div>
+
+  <div class="flex flex-col items-center text-center p-5 space-y-7 ">
+    <div>
+      <img src="./images/icon-any-file.svg" alt="">
+    </div>
+    <h5 class="text-xl font-bold">Security you can trust</h5>
+    <p class="md:max-w-sm">2-factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files.</p>
+  </div>
+</div>
+</section>
+
+<section>
+  <div class="flex flex-col max-w-6xl py-28 mx-5 space-y-6 md:flex-row md:mx-auto md:space-x-16 md:space-y-0">
+    <div>
+      <img src="./images/illustration-stay-productive.png" alt="">
+    </div>
+    <div class="flex flex-col max-w-lg p-5 items-start space-y-6">
+      <h4 class="font-bold mt-16 leading-tight md:text-4xl md:mt-12">
+        Stay productive, wherever you are </h4>
+      <p class="md:text-lg">Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs.</p>
+      <p class="md:text-lg">Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.</p>
+      <div class="border-b border-accentCyan text-accentCyan"><a href="">See how Flyo works</a>
+      <img src="./images/icon-arrow.svg" class="inline-block" alt=""></div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials" class="bg-slate-50 dark:bg-darkBlue pb-80">
+  <div class="relative flex flex-col px-3 py-10 mx-5 space-y-8 md:flex-row md:mx-auto md:space-y-0 md:space-x-12 md:px-16 md:py-16">
+    <div class="absolute top-5 md:-top-5 md:left-20">
+      <img src="./images/bg-quotes.png" class="md:w-20" alt="">
+    </div>
+    <div class="flex flex-col p-8 bg-gray-100 space-y-6 rounded-lg dark:bg-gray-700">
+      <p class="text-sm md:text-lg">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
+      <div class="flex space-x-6">
+        <img src="./images/profile-1.jpg" class="w-10 h-10 rounded-full" alt="">
+        <div>
+        <p class="font-bold text-sm">Satish Patel</p>
+        <p class="text-xs mt-1">Founder & CEO. Huddle</p>
+      </div>
+      </div>
+    </div>
+    
+    <div class="flex flex-col p-8 bg-gray-100 space-y-6 rounded-lg dark:bg-gray-700">
+      <p class="text-sm md:text-lg">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
+      <div class="flex space-x-6">
+        <img src="./images/profile-2.jpg" class="w-10 h-10 rounded-full" alt="">
+        <div>
+        <p class="font-bold text-sm">Bruce McKenzie</p>
+        <p class="text-xs mt-1">Founder & CEO. Huddle</p>
+      </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col p-8 bg-gray-100 space-y-6 rounded-lg dark:bg-gray-700">
+      <p class="text-sm md:text-lg">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
+      <div class="flex space-x-6">
+        <img src="./images/profile-3.jpg" class="w-10 h-10 rounded-full" alt="">
+        <div>
+        <p class="font-bold text-sm">Eva Boyd</p>
+        <p class="text-xs mt-1">Founder & CEO. Huddle</p>
+      </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section class="relative pb-8 dark:bg-darkBlue2">
+<div class="relative -top-40 max-w-4xl mx-5 text-center p-6 rounded-lg  bg-slate-200 dark:bg-darkBlue1 space-y-6 md:mx-auto md:p-10"
+>
+<H4 class="font-bold">Get early access today</H4>
+<p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</p>
+<div class="flex flex-col md:flex-row space-y-5 md:space-y-0 md:space-x-5">
+  <input type="text" placeholder="Email@example.com" class="px-6 py-4 flex-1 rounded-full w-full text-black focus:outline-none">
+  <button class="w-full py-4 px-10 text-center rounded-full bg-accentCyan hover:scale-90 md:w-52 md:px-8">
+    Get Started for free
+  </button>
+</div>
+</div>
+</section>
+
+<footer class="bg-darkBlue2 p-10">
+  <div class="flex flex-col items-start justify-between w-full p-10 mx-auto text-white space-y-6 md:flex-row md:space-y-0 md:space-x-16">
+    <div class="flex text-center flex-col space-y-3">
+      <div class="flex items-center space-x-3">
+        <img src="./images/icon-phone.svg" alt="">
+        <h6>+234 909 307 6633</h6>
+      </div>
+      <div class="flex items-center space-x-3">
+        <img src="./images/icon-email.svg" alt="">
+        <h6>Heedrhiss@gmail.com</h6>
+      </div>
+    </div>
+<div class="flex flex-col justify-center text-center w-full md:flex-row space-y-5 md:space-y-0 md:space-x-10">
+    <div class="flex flex-col space-y-3">
+      <a href="" class="text-lg hover:text-accentCyan">About</a>
+      <a href="" class="text-lg hover:text-accentCyan">Jobs</a>
+      <a href="" class="text-lg hover:text-accentCyan">Press</a>
+      <a href="" class="text-lg hover:text-accentCyan">Blog</a>
+    </div>
+    <div class="flex flex-col space-y-3">
+      <a href="" class="text-lg hover:text-accentCyan">Contact Us</a>
+      <a href="" class="text-lg hover:text-accentCyan">Terms</a>
+      <a href="" class="text-lg hover:text-accentCyan">Privacy</a>
+    </div>
+  </div>
+
+  <div class="flex justify-between mx-auto space-x-10">
+    <a href="https://www.facebook.com/Olowofenira"><img src="./images/facebook.svg" class="p-2 bg-darkBlue rounded-lg ficon md:w-16" alt=""></a>
+    <a href="https://twitter.com/Heedrhiss"><img src="./images/twitter.svg" class="p-2 bg-darkBlue rounded-lg ficon md:w-16" alt=""></a>
+    <a href="https://www.instagram.com/heedrhiss/"><img src="./images/instagram.svg" class="p-2 bg-darkBlue rounded-lg ficon md:w-16" alt=""></a>
+    
+  </div>
+  </div>
+</footer>
+</body>
+</html>
